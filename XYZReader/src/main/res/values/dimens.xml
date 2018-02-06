@@ -9,12 +9,24 @@
     <dimen name="fab_margin">24dp</dimen>
 
     <!-- Defining dimensions -->
+    <dimen name="toolbar_height">80dp</dimen>
     <dimen name="refresher_offset">50dp</dimen>
     <dimen name="refresher_offset_end">600dp</dimen>
     <dimen name="title_text">15sp</dimen>
     <dimen name="author_name_and_date">12sp</dimen>
     <dimen name="article_pic_size_for_card_view">250dp</dimen>
     <dimen name="article_pic_size_for_card_view_land">350dp</dimen>
+    <dimen name="elevation_app_bar">6dp</dimen>
+    <dimen name="up_button_image_size">56dp</dimen>
+    <dimen name="padding_top_recycler_view">116dp</dimen>
+    <dimen name="padding_bottom_recycler_view">28dp</dimen>
+    <dimen name="margin_and_padding">16dp</dimen>
+    <dimen name="title_padding_bottom">4dp</dimen>
+    <dimen name="dynamicHeightNetworkImageView_layout_height">100dp</dimen>
+    <dimen name="card_corner_radius">10dp</dimen>
+    <dimen name="card_elevation">20dp</dimen>
+    <dimen name="card_view_layout_margin">8dp</dimen>
+    <dimen name="view_height">250dp</dimen>
 
 
 </resources>

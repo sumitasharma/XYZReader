@@ -21,10 +21,12 @@
 
     </style>
 
+
     <style name="Theme.Bacon.Detail">
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
     <style name='Theme.AppCompat.textColor'>@style/blackText</style>
+    <style name="AppActionBar" parent="Base.Widget.AppCompat.ActionBar">
 
-
+    </style>
 </resources>

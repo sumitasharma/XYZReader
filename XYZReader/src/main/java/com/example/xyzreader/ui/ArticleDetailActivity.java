@@ -83,6 +83,7 @@ public class ArticleDetailActivity extends ActionBarActivity
             @Override
             public void onClick(View view) {
                 onSupportNavigateUp();
+                overridePendingTransition(R.anim.slide_back_in, R.anim.slide_back_out);
             }
         });
 
