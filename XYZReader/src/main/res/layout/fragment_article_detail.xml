@@ -51,6 +51,7 @@
                 android:layout_height="@dimen/toolbar_height"
                 app:contentInsetStart="@dimen/up_button_image_size"
                 app:layout_collapseMode="pin"
+                app:navigationIcon="?attr/homeAsUpIndicator"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:titleTextAppearance="@dimen/detail_body_text_size" />
 
