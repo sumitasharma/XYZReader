@@ -13,11 +13,11 @@
     <dimen name="title_text">20sp</dimen>
     <dimen name="author_name_and_date">20sp</dimen>
     <dimen name="article_pic_size_for_card_view">400dp</dimen>
-    <dimen name="elevation_app_bar">6dp</dimen>
+    <dimen name="elevation_app_bar">4dp</dimen>
     <dimen name="up_button_image_size">56dp</dimen>
     <dimen name="padding_top_recycler_view">116dp</dimen>
     <dimen name="padding_bottom_recycler_view">28dp</dimen>
-    <dimen name="margin_and_padding">16dp</dimen>
+    <dimen name="margin_and_padding">8dp</dimen>
     <dimen name="title_padding_bottom">4dp</dimen>
     <dimen name="dynamicHeightNetworkImageView_layout_height">100dp</dimen>
     <dimen name="card_corner_radius">10dp</dimen>

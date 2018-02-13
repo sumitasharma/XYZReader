@@ -4,7 +4,7 @@
     <dimen name="detail_body_text_size">22sp</dimen>
     <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.25</item>
 
-    <dimen name="fab_elevation">2dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
     <dimen name="fab_press_translation_z">6dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
 
@@ -16,11 +16,11 @@
     <dimen name="author_name_and_date">12sp</dimen>
     <dimen name="article_pic_size_for_card_view">250dp</dimen>
     <dimen name="article_pic_size_for_card_view_land">350dp</dimen>
-    <dimen name="elevation_app_bar">6dp</dimen>
+    <dimen name="elevation_app_bar">4dp</dimen>
     <dimen name="up_button_image_size">56dp</dimen>
-    <dimen name="padding_top_recycler_view">116dp</dimen>
+    <dimen name="padding_top_recycler_view">16dp</dimen>
     <dimen name="padding_bottom_recycler_view">28dp</dimen>
-    <dimen name="margin_and_padding">16dp</dimen>
+    <dimen name="margin_and_padding">8dp</dimen>
     <dimen name="title_padding_bottom">4dp</dimen>
     <dimen name="dynamicHeightNetworkImageView_layout_height">100dp</dimen>
     <dimen name="card_corner_radius">10dp</dimen>
