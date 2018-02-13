@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.ShareCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.format.DateUtils;
@@ -36,7 +37,7 @@ import java.util.GregorianCalendar;
  * tablets) or a {@link ArticleDetailActivity} on handsets.
  */
 public class ArticleDetailFragment extends Fragment implements
-        LoaderManager.LoaderCallbacks<Cursor> {
+        LoaderManager.LoaderCallbacks<Cursor>, ViewPager.PageTransformer {
     public static final String ARG_ITEM_ID = "item_id";
     private static final String TAG = "ArticleDetailFragment";
     private static final float PARALLAX_FACTOR = 1.25f;
@@ -222,5 +223,25 @@ public class ArticleDetailFragment extends Fragment implements
     public void onLoaderReset(Loader<Cursor> cursorLoader) {
         mCursor = null;
         bindViews();
+    }
+
+    @Override
+    public void transformPage(View page, float position) {
+
+            int pageWidth = mPhotoView.getWidth();
+
+
+            if (position < -1) { // [-Infinity,-1)
+                // This page is way off-screen to the left.
+                mPhotoView.setImageAlpha(1);
+
+            } else if (position <= 1) { // [-1,1]
+
+                mPhotoView.setTranslationX(-position * (pageWidth / 2)); //Half the normal speed
+
+            } else { // (1,+Infinity]
+                // This page is way off-screen to the right.
+                mPhotoView.setImageAlpha(1);
+            }
     }
 }
