@@ -47,7 +47,7 @@ public class ArticleListActivity extends AppCompatActivity implements
     // Use default locale format
     private SimpleDateFormat outputFormat = new SimpleDateFormat();
     // Most time functions can only handle 1902 - 2037
-    private GregorianCalendar START_OF_EPOCH = new GregorianCalendar(2,1,1);
+    private GregorianCalendar START_OF_EPOCH = new GregorianCalendar(2, 1, 1);
     private boolean mIsRefreshing = false;
     private BroadcastReceiver mRefreshingReceiver = new BroadcastReceiver() {
         @Override
@@ -119,7 +119,7 @@ public class ArticleListActivity extends AppCompatActivity implements
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                getLoaderManager().restartLoader(0, null,callback);
+                getLoaderManager().restartLoader(0, null, callback);
                 mSwipeRefreshLayout.setProgressViewOffset(false,
                         getResources().getDimensionPixelSize(R.dimen.refresher_offset),
                         getResources().getDimensionPixelSize(R.dimen.refresher_offset_end));
@@ -163,7 +163,7 @@ public class ArticleListActivity extends AppCompatActivity implements
                 public void onClick(View view) {
                     startActivity(new Intent(Intent.ACTION_VIEW,
                             ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
-                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+
                 }
             });
             return vh;
@@ -197,8 +197,8 @@ public class ArticleListActivity extends AppCompatActivity implements
             } else {
                 holder.subtitleView.setText(Html.fromHtml(
                         outputFormat.format(publishedDate)
-                        + "<br/>" + " by "
-                        + mCursor.getString(ArticleLoader.Query.AUTHOR)));
+                                + "<br/>" + " by "
+                                + mCursor.getString(ArticleLoader.Query.AUTHOR)));
             }
             holder.thumbnailView.setImageUrl(
                     mCursor.getString(ArticleLoader.Query.THUMB_URL),

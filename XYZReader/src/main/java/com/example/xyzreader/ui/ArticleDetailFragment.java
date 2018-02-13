@@ -144,9 +144,9 @@ public class ArticleDetailFragment extends Fragment implements
         bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Rosario-Regular.ttf"));
 
         if (mCursor != null) {
-            mRootView.setAlpha(0);
-            mRootView.setVisibility(View.VISIBLE);
-            mRootView.animate().alpha(1);
+//            mRootView.setAlpha(0);
+//            mRootView.setVisibility(View.VISIBLE);
+//            mRootView.animate().alpha(1);
             String article_title = mCursor.getString(ArticleLoader.Query.TITLE);
             titleView.setText(article_title);
 
@@ -192,6 +192,7 @@ public class ArticleDetailFragment extends Fragment implements
             });
         }
     }
+
 
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {

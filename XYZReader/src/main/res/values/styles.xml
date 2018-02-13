@@ -21,14 +21,25 @@
         <item name="colorPrimary">@color/theme_primary</item>
         <item name="colorPrimaryDark">@color/theme_primary_dark</item>
         <item name="colorAccent">@color/theme_accent</item>
+        <item name="android:windowContentTransitions">true</item>
     </style>
-
-
     <style name="Theme.Bacon.Detail">
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
-    <style name='Theme.AppCompat.textColor'>@style/blackText</style>
-    <style name="AppActionBar" parent="Base.Widget.AppCompat.ActionBar">
 
+    <style name="XYZArticleTitleAppearance" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">@color/text_color_title</item>
+        <item name="android:textSize">@dimen/detail_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="XYZArticleBodyAppearance" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/detail_body_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="XYZArticleByLineAppearance" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@color/text_color_date_author</item>
     </style>
 </resources>
