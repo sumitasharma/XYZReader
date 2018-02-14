@@ -22,7 +22,7 @@
     <dimen name="padding_bottom_recycler_view">28dp</dimen>
     <dimen name="margin_and_padding">8dp</dimen>
     <dimen name="title_padding_bottom">4dp</dimen>
-    <dimen name="dynamicHeightNetworkImageView_layout_height">100dp</dimen>
+    <dimen name="dynamicHeightNetworkImageView_layout_height">0dp</dimen>
     <dimen name="card_corner_radius">10dp</dimen>
     <dimen name="card_elevation">2dp</dimen>
     <dimen name="card_view_layout_margin">8dp</dimen>

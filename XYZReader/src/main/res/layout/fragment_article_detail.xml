@@ -4,7 +4,6 @@
     android:id="@+id/myCoordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light"
     android:fitsSystemWindows="true">
 
 
@@ -48,12 +47,12 @@
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
-
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        app:layout_behavior="com.example.xyzreader.ui.FABAwareScrollingViewBehavior">
 
 
         <LinearLayout
@@ -68,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:layout_marginBottom="@dimen/detail_metabar_vert_padding"
-                android:background="#333"
+                android:background="?attr/colorPrimaryDark"
                 android:orientation="vertical"
                 android:paddingBottom="@dimen/detail_metabar_vert_padding"
                 android:paddingLeft="@dimen/detail_inner_horiz_margin"
