@@ -7,8 +7,12 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
@@ -70,6 +74,15 @@ public class ArticleListActivity extends AppCompatActivity implements
         if (savedInstanceState == null) {
             refresh();
         }
+        if (!isOnline()) {
+            Log.i(TAG, "Internet not connected");
+            Snackbar snackbar = Snackbar.make(findViewById(R.id.myCoordinatorLayout), R.string.internet_connectivity,
+                    Snackbar.LENGTH_SHORT);
+            snackbar.show();
+            View sbView = snackbar.getView();
+            sbView.setBackgroundColor(Color.BLUE);
+        }
+
     }
 
     private void refresh() {
@@ -111,11 +124,21 @@ public class ArticleListActivity extends AppCompatActivity implements
 
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
+
         mRecyclerView.setAdapter(null);
     }
 
     @Override
     public void onRefresh() {
+        if (!isOnline()) {
+            Log.i(TAG, "Internet not connected");
+            Snackbar snackbar = Snackbar.make(findViewById(R.id.myCoordinatorLayout), R.string.internet_connectivity,
+                    Snackbar.LENGTH_SHORT);
+            snackbar.show();
+            View sbView = snackbar.getView();
+            sbView.setBackgroundColor(Color.BLUE);
+        }
+        Log.i(TAG, "Inside onRefresh");
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -126,6 +149,14 @@ public class ArticleListActivity extends AppCompatActivity implements
                 mSwipeRefreshLayout.setRefreshing(false);
             }
         }, 2500);
+    }
+
+    boolean isOnline() {
+        ConnectivityManager cm =
+                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        Log.i(TAG, "inside is online");
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
