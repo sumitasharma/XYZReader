@@ -22,14 +22,14 @@
 
 package com.example.xyzreader.data;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.text.TextUtils;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * Helper for building selection clauses for {@link SQLiteDatabase}. Each
@@ -83,12 +83,6 @@ public class SelectionBuilder {
         if (mTable == null) {
             throw new IllegalStateException("Table not specified");
         }
-    }
-
-    private void ensureProjectionMap() {
-		if (mProjectionMap == null) {
-            mProjectionMap = new HashMap<>();
-		}
     }
 
     private void ensureSelection(int lengthHint) {
